@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item
+            android:id="@+id/light"
+            android:orderInCategory="1"
+            android:title="Светлая" />
+        <item
+            android:id="@+id/dark"
+            android:orderInCategory="2"
+            android:title="Темная" />
+        <item
+            android:id="@+id/other"
+            android:orderInCategory="3"
+            android:title="Другая" />
+
+</menu>

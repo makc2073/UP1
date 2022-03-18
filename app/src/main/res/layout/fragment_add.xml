@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:id="@+id/recapeDateEmp"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="33dp"
+        android:hint="Дата"
+        android:inputType="datetime"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:bootstrapBrand="info"
+        app:bootstrapSize="md"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/salarylEmp" />
+
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:id="@+id/nameEmp"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="33dp"
+        android:hint="Имя"
+
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:bootstrapBrand="info"
+        app:bootstrapSize="md"
+        app:layout_constraintStart_toStartOf="@+id/idEmp"
+        app:layout_constraintTop_toBottomOf="@+id/idEmp" />
+
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:id="@+id/salarylEmp"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="33dp"
+        android:hint="Зарплата"
+        android:inputType="number"
+
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:bootstrapBrand="info"
+        app:bootstrapSize="md"
+        app:layout_constraintStart_toEndOf="@+id/recapeDateEmp"
+        app:layout_constraintStart_toStartOf="@+id/positionEmp"
+        app:layout_constraintTop_toBottomOf="@+id/positionEmp" />
+
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:id="@+id/idEmp"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="48dp"
+        android:hint="id"
+        android:inputType="number"
+
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:bootstrapBrand="info"
+        app:bootstrapSize="md"
+        app:layout_constraintEnd_toEndOf="@+id/nameEmp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:id="@+id/positionEmp"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="33dp"
+        android:hint="Должность"
+
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:bootstrapBrand="info"
+        app:bootstrapSize="md"
+        app:layout_constraintStart_toEndOf="@+id/idEmp"
+        app:layout_constraintStart_toStartOf="@+id/nameEmp"
+        app:layout_constraintTop_toBottomOf="@+id/nameEmp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="139dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.777"
+        app:layout_constraintStart_toEndOf="@+id/nameEmp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_account_circle_24" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/addEmpButton"
+        android:layout_width="117dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:drawableRight="@drawable/ic_baseline_add"
+        android:text="Add  "
+        app:bootstrapBrand="success"
+        app:bootstrapSize="lg"
+        app:buttonMode="regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.595"
+        app:layout_constraintStart_toEndOf="@+id/salarylEmp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:roundedCorners="true"
+        app:showOutline="false" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/editButton"
+        android:layout_width="117dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="36dp"
+        android:drawableRight="@drawable/ic_baseline_edit"
+        android:text="Edit  "
+        app:bootstrapBrand="warning"
+        app:bootstrapSize="lg"
+        app:buttonMode="regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.563"
+        app:layout_constraintStart_toEndOf="@+id/salarylEmp"
+        app:layout_constraintTop_toBottomOf="@+id/addEmpButton"
+        app:roundedCorners="true"
+        app:showOutline="false" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/delButton"
+        android:layout_width="117dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="36dp"
+        android:text="Delete  "
+        app:bootstrapBrand="danger"
+        app:bootstrapSize="lg"
+        app:buttonMode="regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.563"
+        app:layout_constraintStart_toEndOf="@+id/salarylEmp"
+        app:layout_constraintTop_toBottomOf="@+id/editButton"
+        app:roundedCorners="true"
+        app:showOutline="false" />
+
+    <Switch
+        android:id="@+id/switchFried"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="36dp"
+        android:text="Уволен"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recapeDateEmp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
